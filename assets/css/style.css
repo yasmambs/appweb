@@ -1,0 +1,96 @@
+:root {
+  --green-dark: #0f3d2e;
+  --green-emerald: #0d5c46;
+  --gold-soft: #c9a227;
+  --white-soft: #f4f6f5;
+  --navy-premium: #0b2545;
+  --tosca: #0f766e;
+
+  --shadow-soft: 0 10px 25px rgba(0,0,0,0.08);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--white-soft);
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 60px;
+  background: var(--green-dark);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-shadow: var(--shadow-soft);
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: var(--navy-premium);
+  position: fixed;
+  top: 60px;
+  left: 0;
+  padding-top: 20px;
+  color: white;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sidebar li:hover {
+  background: var(--green-emerald);
+}
+
+/* CONTENT */
+.content {
+  margin-left: 250px;
+  margin-top: 60px;
+  padding: 30px;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: var(--tosca);
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: var(--green-dark);
+  border-bottom: 2px solid var(--gold-soft);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
