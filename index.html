@@ -8,12 +8,14 @@
 </head>
 <body>
 
-  <div class="navbar">
+  <!-- NAVBAR -->
+  <header class="navbar">
     <div class="logo">PORTAL MADRASAH</div>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  </div>
+  </header>
 
-  <div class="sidebar" id="sidebar">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
     <ul>
       <li>Dashboard</li>
       <li>Madrasah</li>
@@ -21,9 +23,13 @@
       <li>LMS</li>
       <li>SPMB</li>
     </ul>
-  </div>
+  </aside>
 
-  <div class="content">
+  <!-- OVERLAY (untuk mobile) -->
+  <div class="overlay" onclick="toggleMenu()"></div>
+
+  <!-- CONTENT -->
+  <main class="content">
     <div class="breadcrumb">
       Dashboard / Overview
     </div>
@@ -37,13 +43,14 @@
       <h2>Ringkasan Sistem</h2>
       <p>CBT, LMS, dan SPMB dalam satu dashboard terintegrasi.</p>
     </div>
-  </div>
+  </main>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("sidebar").classList.toggle("active");
-    }
-  </script>
+<script>
+function toggleMenu() {
+  document.querySelector(".sidebar").classList.toggle("active");
+  document.querySelector(".overlay").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
