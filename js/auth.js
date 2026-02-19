@@ -1,24 +1,21 @@
-const ADMIN_USER = "admin";
-const ADMIN_PASS = "123";
+const Auth = {
+  login(user){
+    localStorage.setItem("user", user);
+    window.location.href = "dashboard.html";
+  },
 
-const AuthAdmin = {
-  login(u, p){
-    if(u === ADMIN_USER && p === ADMIN_PASS){
-      localStorage.setItem("admin", "login");
-      window.location.href = "index.html";
-    } else {
-      alert("Login gagal");
-    }
+  getUser(){
+    return localStorage.getItem("user");
   },
 
   protect(){
-    if(localStorage.getItem("admin") !== "login"){
-      window.location.href = "login.html";
+    if(!this.getUser()){
+      window.location.href = "index.html";
     }
   },
 
   logout(){
-    localStorage.removeItem("admin");
-    window.location.href = "login.html";
+    localStorage.removeItem("user");
+    window.location.href = "index.html";
   }
 };
