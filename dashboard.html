@@ -1,0 +1,14 @@
+<script src="js/auth.js"></script>
+<script>Auth.protect()</script>
+
+<h2>Dashboard</h2>
+
+<button onclick="go('cbt')">CBT</button>
+<button onclick="go('lms')">LMS</button>
+<button onclick="go('spmb')">SPMB</button>
+
+<script>
+function go(modul){
+  window.location.href = modul + "/index.html";
+}
+</script>
