@@ -1,14 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+    }
+
+    .header {
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 15px;
+    }
+
+    .card {
+      padding: 25px;
+      border-radius: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .cbt { background: #ef4444; }
+    .lms { background: #3b82f6; }
+    .spmb { background: #22c55e; }
+    .logout { background: #64748b; }
+
+  </style>
+</head>
+
+<body>
+
 <script src="js/auth.js"></script>
 <script>Auth.protect()</script>
 
-<h2>Dashboard</h2>
+<div class="header">
+  🎓 Portal Siswa
+</div>
 
-<button onclick="go('cbt')">CBT</button>
-<button onclick="go('lms')">LMS</button>
-<button onclick="go('spmb')">SPMB</button>
+<div class="grid">
+  <div class="card cbt" onclick="go('cbt')">🧪 CBT SNBT</div>
+  <div class="card lms" onclick="go('lms')">📚 LMS Belajar</div>
+  <div class="card spmb" onclick="go('spmb')">📝 SPMB</div>
+  <div class="card logout" onclick="logout()">🚪 Logout</div>
+</div>
 
 <script>
 function go(modul){
   window.location.href = modul + "/index.html";
 }
+
+function logout(){
+  localStorage.clear();
+  window.location.href = "index.html";
+}
 </script>
+
+</body>
+</html>
