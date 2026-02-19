@@ -1,11 +1,68 @@
-<h2>ADMIN</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<button onclick="go('cbt.html')">Kelola CBT</button>
-<button onclick="go('lms.html')">Kelola LMS</button>
-<button onclick="go('spmb.html')">Data SPMB</button>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #020617;
+      color: white;
+    }
+
+    .header {
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 15px;
+    }
+
+    .card {
+      padding: 25px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .madrasah { background: #f59e0b; }
+    .cbt { background: #ef4444; }
+    .lms { background: #3b82f6; }
+    .spmb { background: #22c55e; }
+
+  </style>
+</head>
+
+<body>
+
+<div class="header">
+  ⚙️ Admin Panel
+</div>
+
+<div class="grid">
+  <div class="card madrasah" onclick="go('madrasah.html')">🏫 Madrasah</div>
+  <div class="card cbt" onclick="go('cbt.html')">🧪 CBT</div>
+  <div class="card lms" onclick="go('lms.html')">📚 LMS</div>
+  <div class="card spmb" onclick="go('spmb.html')">📝 SPMB</div>
+</div>
 
 <script>
 function go(p){
   window.location.href = p;
 }
 </script>
+
+</body>
+</html>
