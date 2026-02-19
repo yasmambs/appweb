@@ -1,14 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal Madrasah</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-<h1>PORTAL MADRASAH</h1>
-<link rel="stylesheet" href="css/style.css">
-<a href="admin/index.html">Masuk Admin</a>
-<br><br>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">PORTAL MADRASAH</div>
+    <div>Admin</div>
+  </div>
 
-<a href="#" onclick="masuk()">Masuk User</a>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <ul>
+      <li>Dashboard</li>
+      <li>Madrasah</li>
+      <li>CBT</li>
+      <li>LMS</li>
+      <li>SPMB</li>
+    </ul>
+  </div>
 
-<script>
-function masuk(){
-  localStorage.setItem("user", "siswa");
-  window.location.href = "dashboard.html";
-}
-</script>
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="breadcrumb">
+      Dashboard / Overview
+    </div>
+
+    <div class="card">
+      <h2>Selamat Datang</h2>
+      <p>Portal sistem informasi Madrasah berbasis digital.</p>
+    </div>
+
+    <div class="card">
+      <h2>Ringkasan Sistem</h2>
+      <p>CBT, LMS, dan SPMB dalam satu dashboard terintegrasi.</p>
+    </div>
+  </div>
+
+</body>
+</html>
