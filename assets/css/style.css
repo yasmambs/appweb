@@ -10,6 +10,7 @@
   --radius: 12px;
   --transition: all 0.3s ease;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +20,6 @@
 
 body {
   background: var(--white-soft);
-  color: #333;
 }
 
 /* NAVBAR */
@@ -30,25 +30,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 20px;
   box-shadow: var(--shadow-soft);
 }
 
 .logo {
   font-weight: bold;
-  letter-spacing: 1px;
 }
 
-/* SIDEBAR */
+/* HAMBURGER */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* SIDEBAR (Mobile default hidden) */
 .sidebar {
+  position: fixed;
+  top: 60px;
+  left: -260px;
   width: 250px;
   height: 100vh;
   background: var(--navy-premium);
-  position: fixed;
-  top: 60px;
-  left: 0;
   padding-top: 20px;
-  color: white;
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
 }
 
 .sidebar ul {
@@ -57,8 +67,8 @@ body {
 
 .sidebar li {
   padding: 15px 25px;
+  color: white;
   cursor: pointer;
-  transition: var(--transition);
 }
 
 .sidebar li:hover {
@@ -67,9 +77,8 @@ body {
 
 /* CONTENT */
 .content {
-  margin-left: 250px;
+  padding: 20px;
   margin-top: 60px;
-  padding: 30px;
 }
 
 /* BREADCRUMB */
@@ -82,7 +91,7 @@ body {
 /* CARD */
 .card {
   background: white;
-  padding: 25px;
+  padding: 20px;
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
   margin-bottom: 20px;
@@ -91,6 +100,23 @@ body {
 h2 {
   color: var(--green-dark);
   border-bottom: 2px solid var(--gold-soft);
-  padding-bottom: 8px;
-  margin-bottom: 15px;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .sidebar {
+    left: 0;
+  }
+
+  .content {
+    margin-left: 250px;
+    padding: 30px;
+  }
 }
