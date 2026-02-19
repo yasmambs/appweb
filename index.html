@@ -1,7 +1,13 @@
 <h1>PORTAL MADRASAH</h1>
-<link rel="stylesheet" href="css/style.css">
-<a href="dashboard.html">Masuk</a>
-<a href="admin/index.html">Admin</a>
-<script src="js/auth.js"></script>
 
-<a href="#" onclick="Auth.login('siswa')">Masuk</a>
+<a href="admin/index.html">Masuk Admin</a>
+<br><br>
+
+<a href="#" onclick="masuk()">Masuk User</a>
+
+<script>
+function masuk(){
+  localStorage.setItem("user", "siswa");
+  window.location.href = "dashboard.html";
+}
+</script>
